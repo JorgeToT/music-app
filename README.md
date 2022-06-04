@@ -1,3 +1,5 @@
+I create this project based in courser "Build a Fullstack App from Scratch (feat Next.js)", given by Scott Moss published: March 15, 2022.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
