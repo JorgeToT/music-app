@@ -29,6 +29,9 @@ const GradientLayout = (props) => {
           <Text fontSize={"x-small"}>{props.description}</Text>
         </Box>
       </Flex>
+      <Box paddingY="50px">
+        {props.children}
+      </Box>
     </Box>
   );
 };

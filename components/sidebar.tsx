@@ -10,7 +10,7 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/layout";
-import { background } from "@chakra-ui/react";
+import { background, calc } from "@chakra-ui/react";
 import {
   MdHome,
   MdSearch,
@@ -59,10 +59,11 @@ const Sidebar = () => {
   return (
     <Box
       width={"100%"}
-      height={"calc(100vh - 100px)"}
       background="black"
       paddingX={"5px"}
       color="gray"
+      height={"100%"}
+      overflowY="auto"
     >
       <Box paddingY={"20px"} height={"100%"}>
         <Box width={"120px"} marginBottom="20px" paddingX={"20px"}>
@@ -110,16 +111,22 @@ const Sidebar = () => {
         </Box>
         <Divider color={"gray.800"} />
         <Box
-          height={"68%"}
           overflowY={"auto"}
           paddingY={"20px"}
           marginY={"20px"}
+          height="360px"
         >
           <List spacing={2}>
             {playlists.map((playlist) => (
               <ListItem paddingX="20px" fontSize={"16px"} key={playlist.id}>
                 <LinkBox>
-                  <NextLink href="/" passHref>
+                  <NextLink
+                    href={{
+                      pathname: "/playlist/[id]",
+                      query: { id: playlist.id },
+                    }}
+                    passHref
+                  >
                     <LinkOverlay>{playlist.name}</LinkOverlay>
                   </NextLink>
                 </LinkBox>
