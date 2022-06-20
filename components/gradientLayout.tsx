@@ -13,6 +13,7 @@ const GradientLayout = (props) => {
         <Box padding="20px">
           <Image
             boxSize="160px"
+            objectFit="cover"
             boxShadow={"2xl"}
             src={props.image}
             borderRadius={props.roundImage ? "100%" : "3px"}
@@ -22,10 +23,10 @@ const GradientLayout = (props) => {
           <Text fontSize="x-small" fontWeight="bold" casing={"uppercase"}>
             {props.subtitle}
           </Text>
-          <Text fontSize={"6xl"} height={"100%"}>{props.title}</Text>
-          <Text fontSize={"x-small"}>
-            {props.description}
+          <Text fontSize={"6xl"} height={"100%"}>
+            {props.title}
           </Text>
+          <Text fontSize={"x-small"}>{props.description}</Text>
         </Box>
       </Flex>
     </Box>
