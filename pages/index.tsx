@@ -29,7 +29,7 @@ const Home = ({ artists }) => {
         </Box>
         <Flex overflowX={"auto"}>
           {artists.map((artist) => (
-            <Box paddingX="10px" minWidth="200px" maxWidth={"250px"}>
+            <Box paddingX="10px" minWidth="200px" maxWidth={"250px"} key={artist.id}>
               <Box
                 bg="gray.900"
                 borderRadius="4px"

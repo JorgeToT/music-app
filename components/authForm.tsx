@@ -34,7 +34,7 @@ const AuthForm: FC<{ mode: "signin" | "signup"; text: string }> = ({
         <NextImage src="/logo.svg" alt="logo" width="120px" height="60px" />
       </Flex>
       <Flex justify={"center"} align={"center"} height={"calc(100vh - 100px)"}>
-        <Box padding={"50px"} bg={"gray.900"} borderRadius="6px">
+        <Box padding={"40px"} bg={"gray.900"} borderRadius="6px" lineHeight={"50px"}>
           <form onSubmit={handleSubmit}>
             <Input
               placeholder="Email"
